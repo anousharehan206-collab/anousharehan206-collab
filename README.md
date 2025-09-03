@@ -9,7 +9,7 @@ Junior Software Developer | HTML • CSS • JavaScript • PHP • MySQL
 
 ## 🔗 Connect with Me
 - 💼 [LinkedIn](https://www.linkedin.com/in/anousha-rehan-942456376)  
-- 🌐 [Portfolio Website]("C:\Users\nbp\Downloads\anousha task\portfolio notepad code\anousha_single_file_portfolio_website_index.html")  
+- 🌐 [Portfolio Website](https://anousharehan206-collab.github.io/portfolio-website/)  
 - 📧 [Email Me](https://mail.google.com/mail/?view=cm&fs=1&to=anousharehan206@gmail.com)  
 - 💻 [GitHub](https://github.com/anousharehan206-collab)  
 
