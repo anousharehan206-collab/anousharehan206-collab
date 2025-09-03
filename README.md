@@ -1,18 +1,35 @@
 # 👩‍💻 Anousha Rehan
-Junior Software Developer | HTML • CSS • JavaScript • PHP • MySQL • WordPress
+Junior Software Developer | HTML • CSS • JavaScript • PHP • MySQL   
 
-🌟 I love building clean, responsive, and user-friendly websites & applications.  
+🌟 Passionate about building clean, responsive, and user-friendly websites & applications.  
 📚 Currently pursuing Diploma in Software Engineering (Aptech, 2024).  
-🚀 Exploring: Digital Marketing + Full-Stack Development.
+🚀 Exploring Digital Marketing and Full-Stack Development.  
 
 ---
 
-## 🔗 My Links
+## 🔗 Connect with Me
 - 💼 [LinkedIn](https://www.linkedin.com/in/anousha-rehan-942456376)  
-- 🌐 [Portfolio Website](https://anousharehan206-collab.github.io/portfolio-website/)  
-- 📧 [Email](mailto:anousharehan206@gmail.com)  
+- 🌐 [Portfolio Website](https://anousharehan206-collab.github.io/portfolio-website/) *(Coming Soon)*  
+- 📧 [Email Me](https://mail.google.com/mail/?view=cm&fs=1&to=anousharehan206@gmail.com)  
+- 💻 [GitHub](https://github.com/anousharehan206-collab)  
 
 ---
 
 ## 🛠️ Tech Stack
-HTML • CSS • JavaScript • PHP • MySQL • WordPress • Bootstrap • Git/GitHub
+- HTML5, CSS3, JavaScript (ES6)  
+- PHP, MySQL    
+- Bootstrap  
+- Git & GitHub  
+
+---
+
+## 📌 Featured Projects
+1. 🛒 **E-Commerce Store**  
+   🔗 [Live Demo](https://anousharehan206-collab.github.io/ecommerce-store/) | [Code](https://github.com/anousharehan206-collab/ecommerce-store)  
+ 
+ 2. 🌐 **Portfolio Website**  
+   🔗 [Live Demo](https://anousharehan206-collab.github.io/portfolio-website/) | [Code](https://github.com/anousharehan206-collab/portfolio-website)  
+
+---
+
+⭐ **Tip:** Jitne projects aap add karte jaoge (e.g. small HTML/JS apps bhi), unhe repo me daal kar yahan list kar do. Ye HR ke liye aapke kaam ka showcase ban jayega.
