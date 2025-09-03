@@ -27,10 +27,6 @@ Junior Software Developer | HTML • CSS • JavaScript • PHP • MySQL
 ## 📌 Featured Projects
 1. 🛒 **E-Commerce Store**  
    🔗 [Live Demo](https://anousharehan206-collab.github.io/ecommerce-store/) | [Code](https://github.com/anousharehan206-collab/ecommerce-store)  
- 
- 2. 🌐 **Portfolio Website**  
-   🔗 [Live Demo](https://anousharehan206-collab.github.io/portfolio-website/) | [Code](https://github.com/anousharehan206-collab/portfolio-website)  
-
 ---
 
 ⭐ **Tip:** Jitne projects aap add karte jaoge (e.g. small HTML/JS apps bhi), unhe repo me daal kar yahan list kar do. Ye HR ke liye aapke kaam ka showcase ban jayega.
