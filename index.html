@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Anousha Rehan – Junior Software Developer</title>
+  <meta name="description" content="Portfolio of Anousha Rehan – Junior Software Developer (HTML, CSS, JavaScript, PHP, MySQL, WordPress)">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0c10; --card:#111216; --text:#e8e9ec; --muted:#a5a7ac; --accent:#7c5cff; --accent-2:#00d4ff; --border:#1b1d24;
+    }
+    @media (prefers-color-scheme: light){
+      :root{ --bg:#f6f7fb; --card:#ffffff; --text:#22252b; --muted:#5b606b; --accent:#5a3df0; --accent-2:#06a3d7; --border:#e7e9ef; }
+    }
+    *{ box-sizing:border-box }
+    html,body{ height:100% }
+    body{
+      margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial; background:radial-gradient(1200px 800px at 10% -10%, rgba(124,92,255,.15), transparent 60%), radial-gradient(1200px 800px at 110% -10%, rgba(0,212,255,.15), transparent 60%), var(--bg); color:var(--text);
+    }
+    a{ color:inherit; text-decoration:none }
+    .container{ width:min(1100px, 92%); margin-inline:auto }
+    header{
+      position:sticky; top:0; backdrop-filter:saturate(140%) blur(10px); background:color-mix(in lab, var(--bg) 80%, transparent); border-bottom:1px solid var(--border); z-index:1000;
+    }
+    nav{ display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:0.9rem 0 }
+    .brand{ display:flex; align-items:center; gap:.6rem; font-weight:700; letter-spacing:.2px }
+    .dot{ width:10px; height:10px; border-radius:50%; background:linear-gradient(135deg, var(--accent), var(--accent-2)); box-shadow:0 0 16px rgba(124,92,255,.6) }
+    .links a{ opacity:.9; margin-left:1rem }
+    .btn{ display:inline-flex; align-items:center; gap:.5rem; padding:.7rem 1rem; border-radius:14px; border:1px solid var(--border); background:linear-gradient(180deg, color-mix(in lab, var(--card) 90%, transparent), var(--card)); box-shadow:0 6px 18px rgba(0,0,0,.08); transition:.2s transform; font-weight:600 }
+    .btn:hover{ transform:translateY(-1px) }
+
+    /* hero */
+    .hero{ display:grid; grid-template-columns:1.1fr .9fr; gap:2rem; padding:4rem 0 2rem; align-items:center }
+    @media (max-width:900px){ .hero{ grid-template-columns:1fr; padding-top:2.5rem } }
+    .tag{ display:inline-flex; align-items:center; gap:.5rem; padding:.35rem .6rem; border-radius:999px; background:rgba(124,92,255,.15); border:1px dashed color-mix(in lab, var(--accent) 40%, transparent); color:var(--text); font-weight:600; font-size:.8rem }
+    .tag svg{ width:16px; height:16px }
+    h1{ font-size:clamp(1.8rem, 3.5vw, 3rem); line-height:1.1; margin:.7rem 0 }
+    .lead{ color:var(--muted); font-size:1.05rem; line-height:1.6 }
+    .hero-card{ background:linear-gradient(180deg, color-mix(in lab, var(--card) 86%, transparent), var(--card)); border:1px solid var(--border); border-radius:22px; padding:1.2rem }
+    .grid{ display:grid; grid-template-columns:repeat(3, 1fr); gap:1rem }
+    @media (max-width:700px){ .grid{ grid-template-columns:1fr 1fr } }
+    @media (max-width:500px){ .grid{ grid-template-columns:1fr } }
+    .pill{ padding:.5rem .7rem; border:1px solid var(--border); border-radius:999px; text-align:center; font-weight:600; background:var(--card) }
+
+    /* section */
+    section{ padding:3rem 0 }
+    .section-head{ display:flex; align-items:end; justify-content:space-between; gap:1rem; margin-bottom:1.2rem }
+    .section-head h2{ margin:0; font-size:1.4rem }
+    .muted{ color:var(--muted) }
+
+    /* projects */
+    .projects{ display:grid; grid-template-columns:repeat(3, 1fr); gap:1.2rem }
+    @media (max-width:980px){ .projects{ grid-template-columns:repeat(2, 1fr) } }
+    @media (max-width:640px){ .projects{ grid-template-columns:1fr } }
+    .card{ border:1px solid var(--border); background:linear-gradient(180deg, color-mix(in lab, var(--card) 92%, transparent), var(--card)); border-radius:18px; overflow:hidden; display:flex; flex-direction:column }
+    .thumb{ aspect-ratio: 16/9; background:linear-gradient(135deg, rgba(124,92,255,.22), rgba(0,212,255,.22)); display:flex; align-items:center; justify-content:center; font-weight:700; letter-spacing:.6px }
+    .card-body{ padding:1rem 1rem 1.2rem; display:flex; flex-direction:column; gap:.6rem }
+    .card h3{ margin:.2rem 0; font-size:1.05rem }
+    .badges{ display:flex; flex-wrap:wrap; gap:.4rem }
+    .badge{ font-size:.75rem; padding:.25rem .5rem; border-radius:999px; border:1px solid var(--border); background:var(--card) }
+    .actions{ display:flex; gap:.6rem; margin-top:.4rem }
+
+    /* about & contact */
+    .about{ display:grid; grid-template-columns:1.2fr .8fr; gap:1.5rem }
+    @media (max-width:900px){ .about{ grid-template-columns:1fr } }
+    .about .pane{ border:1px solid var(--border); background:var(--card); border-radius:18px; padding:1.2rem }
+
+    footer{ padding:2.5rem 0; border-top:1px solid var(--border); color:var(--muted); font-size:.95rem }
+    .socials{ display:flex; gap:.6rem }
+    .iconbtn{ padding:.6rem .7rem; border-radius:12px; border:1px solid var(--border); background:var(--card) }
+    .sr-only{ position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0 }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav aria-label="Primary">
+        <div class="brand"><span class="dot" aria-hidden="true"></span> Anousha Rehan</div>
+        <div class="links">
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#about">About</a>
+          <a href="#contact" class="btn">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero" id="home">
+      <div>
+        <span class="tag" aria-label="Role">
+          <!-- spark icon -->
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2l1.9 5.7L20 9l-5.3 3.4L13.9 18 12 12.9 10.1 18l-.8-5.6L4 9l6.1-1.3L12 2z"/></svg>
+          Junior Software Developer
+        </span>
+        <h1>Building clean, fast and responsive web experiences.</h1>
+        <p class="lead">I work across the stack with <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, <strong>PHP</strong> and <strong>MySQL</strong>, and also with <strong>WordPress</strong> & <strong>Bootstrap</strong>. I enjoy turning ideas into polished user interfaces and practical applications.</p>
+        <div style="display:flex; gap:.6rem; margin-top:1rem">
+          <a class="btn" href="#projects">See Projects</a>
+          <!-- TODO: replace # with your resume file link (Google Drive or GitHub) -->
+          <a class="btn" href="C:\Users\nbp\Downloads\Anousha Resume.pdf" target="_blank" rel="noopener">Download Resume</a>
+        </div>
+      </div>
+      <div class="hero-card" aria-label="Highlights">
+        <div class="grid" id="skills">
+          <div class="pill">HTML • CSS • JS</div>
+          <div class="pill">PHP • MySQL</div>
+          <div class="pill">Bootstrap</div>
+          <div class="pill">WordPress</div>
+          <div class="pill">Git • GitHub</div>
+          <div class="pill">OOP Concepts</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="section-head">
+        <h2>Selected Projects</h2>
+        <p class="muted">Live demos + source code links</p>
+      </div>
+      <div class="projects">
+        <!-- Project 1 -->
+        <article class="card">
+          <div class="thumb" role="img" aria-label="E‑Commerce Store preview">E‑Commerce Store</div>
+          <div class="card-body">
+            <h3>Minimal E‑Commerce (PHP + MySQL)</h3>
+            <p class="muted">Product catalog, cart, and checkout simulation. Responsive layout with Bootstrap.</p>
+            <div class="badges">
+              <span class="badge">PHP</span>
+              <span class="badge">MySQL</span>
+              <span class="badge">Bootstrap</span>
+            </div>
+           <div class="actions">
+  <a class="btn" href="https://anousharehan206-collab.github.io/ecommerce-store/" target="_blank" rel="noopener">Live Demo</a>
+  <a class="btn" href="https://github.com/anousharehan206-collab/ecommerce-store" target="_blank" rel="noopener">Code</a>
+</div>
+
+          </div>
+        </article>
+        <!-- Project 2 -->
+        <article class="card">
+          <div class="thumb" role="img" aria-label="Portfolio Website preview">Portfolio Website</div>
+          <div class="card-body">
+            <h3>Personal Portfolio (This site)</h3>
+            <p class="muted">Accessible, single‑file, fast loading portfolio with dark/light support.</p>
+            <div class="badges">
+              <span class="badge">HTML</span>
+              <span class="badge">CSS</span>
+              <span class="badge">A11y</span>
+            </div>
+            <div class="actions">
+              <a class="btn" href="#" target="_blank" rel="noopener">Live Demo</a>
+              <a class="btn" href="#" target="_blank" rel="noopener">Code</a>
+            </div>
+          </div>
+        </article>
+        <!-- Project 3 -->
+        <article class="card">
+          <div class="thumb" role="img" aria-label="Blog CMS preview">Blog CMS</div>
+          <div class="card-body">
+            <h3>Lightweight Blog (WordPress/Custom Theme)</h3>
+            <p class="muted">Custom WordPress theme with clean typography and SEO‑friendly structure.</p>
+            <div class="badges">
+              <span class="badge">WordPress</span>
+              <span class="badge">PHP</span>
+              <span class="badge">SEO</span>
+            </div>
+            <div class="actions">
+              <a class="btn" href="#" target="_blank" rel="noopener">Live Demo</a>
+              <a class="btn" href="#" target="_blank" rel="noopener">Code</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="about">
+        <div class="pane">
+          <h2>About</h2>
+          <p>Hi, I’m <strong>Anousha Rehan</strong>, a Junior Software Developer. I enjoy building practical web apps and interfaces. I’ve worked with layouts, forms, authentication, and database CRUD using PHP & MySQL, and I’m comfortable with WordPress customizations. I value clean code, accessibility, and performance.</p>
+          <ul>
+            <li><strong>Location:</strong> North Karachi</li>
+            <li><strong>Education:</strong> Diploma in Software Engineering (Aptech, 2024)</li>
+            <li><strong>Also learning:</strong> Digital Marketing</li>
+          </ul>
+        </div>
+        <div class="pane">
+          <h2>Tech Stack</h2>
+          <p class="muted">Primary tools and platforms I use</p>
+          <div class="grid">
+            <div class="pill">HTML5</div>
+            <div class="pill">CSS3 / Flexbox / Grid</div>
+            <div class="pill">JavaScript (ES6)</div>
+            <div class="pill">PHP</div>
+            <div class="pill">MySQL</div>
+            <div class="pill">Bootstrap</div>
+            <div class="pill">WordPress</div>
+            <div class="pill">Git & GitHub</div>
+            <div class="pill">VS Code</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="section-head">
+        <h2>Contact</h2>
+        <p class="muted">Let’s build something great</p>
+      </div>
+      <div class="about">
+        <div class="pane">
+          <form action="mailto:anousharehan206@gmail.com" method="post" enctype="text/plain" aria-label="Quick email form">
+            <label for="name">Name</label>
+            <input id="name" name="name" required style="width:100%; padding:.8rem; margin:.4rem 0 1rem; border-radius:12px; border:1px solid var(--border); background:var(--card); color:var(--text)">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required style="width:100%; padding:.8rem; margin:.4rem 0 1rem; border-radius:12px; border:1px solid var(--border); background:var(--card); color:var(--text)">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required style="width:100%; padding:.8rem; margin:.4rem 0 1rem; border-radius:12px; border:1px solid var(--border); background:var(--card); color:var(--text)"></textarea>
+            <button class="btn" type="submit">Send</button>
+          </form>
+        </div>
+        <!-- Contact Section -->
+<div class="pane">
+  <h3>Direct</h3>
+  <p><strong>Phone:</strong> <a href="tel:+923161261683">+92 316 1261683</a></p>
+  <p><strong>Email:</strong> <a href="mailto:anousharehan206@gmail.com">anousharehan206@gmail.com</a></p>
+  <div class="socials" aria-label="Social links">
+    <a class="iconbtn" href="https://github.com/anousharehan206-collab" aria-label="GitHub" target="_blank" rel="noopener">GitHub</a>
+    <a class="iconbtn" href="https://www.linkedin.com/in/anousha-rehan-942456376" aria-label="LinkedIn" target="_blank" rel="noopener">LinkedIn</a>
+    <a class="iconbtn" href="https://anousharehan206-collab.github.io/portfolio-website/" aria-label="Portfolio" target="_blank" rel="noopener">Portfolio</a>
+  </div>
+</div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © <span id="year"></span> Anousha Rehan · Built with ♥︎
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
